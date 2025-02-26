@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<div class="container py-5">
+    <h1 class="text-center">Aluminium production calculation</h1>
+</div>
+<div class="container rounded bg-white mb-5">
+    <h3 class="text-center py-4">Raw meterials of aluminium production</h3>
+    <div class="row p-4 ">
+        <div class="col-0 col-md-1">
+
+        </div>
+        <div class="col-12 col-md-4 pb-5 pb-md-0">
+            <img class="w-100" src="{% static 'images/alu_img_2.jpg' %}">
+        </div>
+        <div class="col-0 col-md-1">
+
+        </div>
+        <div class="col-12 col-md-6">
+            <p>The following raw meterials are used to produce the aluminium</p>
+            <ul>
+                <li>Bauxite</li>
+                <li>Aluminium Oxide</li>
+                <li>Carbon</li>
+                <li>Aluminium Fluride</li>
+                <li>Cryolite</li>
+                <li>Electical Energy</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container bg-white rounded p-4 mb-5">
+    <h3 class="text-center pb-5">Explaining calculation of Aluminium</h3>
+    <div class="row py-3">
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <img class="w-100 rounded" src="{% static 'images/alu_flow_chart.jpg' %}"/>
+        </div>
+        <div class="col-12 col-md-8 ">
+            
+            <p style="text-indent:150px">To find the mass of aluminium produced, we'll use the mass of aluminium oxide (Al<sub>2</sub>O<sub>3</sub>) as a starting point , since aluminium is extracted from aluminium oxide during the electrolytic reduction process(Hall-Heroult process).</p>
+            <p>The balanced chaemical equation for the reduction of aluminium oxide to aluminium is:</p><br/>
+            <p class="h6">2Al<sub>2</sub>O<sub>3</sub> -> 4Al + 3O<sub>2</sub></p><br/>
+            <p>-> 2 moles of aluminium oxide produce 4 moles of aluminium</p>
+        </div>    
+    </div>
+    <div class="row">
+        <h3>Molar masses</h3>
+        <ul class="ps-5">
+            <li>Molar mass of aluminium oxide (Al<sub>2</sub>O<sub>3</sub>) = <br/>
+                2 X 27 + 3 X 16 = 102 g/mol</li>
+            <li>Molar mass of aluminium (Al) = <br/>27 g/mol</li>
+        </ul>
+        <br/>
+        <h3>Ratio of aluminium oxide to aluminium</h3>
+        <p>From the equation</p>
+        <ul class="ps-5">
+            <li>2 moles of aluminium oxide (Al<sub>2</sub>O<sub>3</sub>)(whice weight 2 X 102 = 204 g) gives 4 moles of aliminium (Al) (which weights 4 X 27 = 108 g).</li>
+        </ul>
+        <p>Thus , 102 g of (Al<sub>2</sub>O<sub>3</sub>) will give 54 g of Al.</p><br/>
+        <h3>calculate aluminium from (Al<sub>2</sub>O<sub>3</sub>)</h3><br/>
+        <p>if 102 g of (Al<sub>2</sub>O<sub>3</sub>) gives 54 g of Al, then:</p><br/>
+        <div class="row ms-5 mt-5" style="width:400px;">
+            <div class="col-5">
+                <p>54 g Al</p><h3><hr style="width:120px"/></h3>
+                <p>102 g (Al<sub>2</sub>O<sub>3</sub>)</p>
+            </div>
+            <div class="col-2">
+                <p class="mt-4">=</p>
+            </div>
+            <div class="col-5">
+                <p>x g Al</p><h3><hr style="width:120px"/></h3>
+                <p>y g (Al<sub>2</sub>O<sub>3</sub>)</p>
+            </div>
+        </div>
+    </div>
+   
+    
+</div>
+{% endblock %}

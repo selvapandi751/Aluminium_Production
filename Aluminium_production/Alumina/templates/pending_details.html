@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container p-4">
+    <h1 class="text-center page-header text-warning">Pending Details</h1>
+</div>
+<div class="container">
+    {% if datas %}
+    <div class='table-responsive'>
+        <table class=" table table-bordered table-flexible">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Mail</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Status</th>
+                <th class="text-center">Approve</th>
+            </tr>
+            
+                {% for data in datas %}
+                <tr>
+                    <td>{{data.Name}}</td>
+                    <td>{{data.Age}}</td>
+                    <td>{{data.Address}}</td>
+                    <td>{{data.Mail}}</td>
+                    <td>{{data.Username}}</td>
+                    <td>{{data.Password}}</td> 
+                    <td>{{data.Status}}</td>
+                    <td class="text-center"><a class="btn btn-success" href="./approve/{{data.id}}">Approve</a></td>
+                </tr>
+                
+                {% endfor %}
+        </table>
+    </div>
+    <div class='container'>
+        <p class="pt-5 pt-md-3">Click here to go to adminhome</p>
+        <a class="btn btn-primary" href="./adminhome">Admin home</a>
+    </div>
+
+    {% else %}
+        <div class="container text-center py-5">
+            <h1 class="text-primary">No Data here</h1>
+            <p>Click here to go to adminhome</p>
+            <a class="btn btn-primary" href='./adminhome'>Admin home</a>
+        </div>
+    {% endif %}
+    
+</div>
+
+
+{% endblock %}
